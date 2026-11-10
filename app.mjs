@@ -109,10 +109,8 @@ function Gallery() {
   return h('section', { className: 'services', id: 'occasions' },
     h('span', { className: 'eyebrow' }, 'Honoring Habesha tradition'),
     h('h2', null, 'Wedding Decor Inspiration'),
-    h('p', { className: 'gallery-note' }, 'Reference photography and event styling by ', h('a', { href: 'https://eventsbymaryam.com/habesha-wedding-decorator-columbus' }, 'Events By Maryam'), '. Select a photo to see it in more detail.'),
     h('div', { className: 'grid reference-grid' }, weddingReferences.map(concept => h(ConceptCard, { key: concept.image, concept }))),
     h('h2', { className: 'concept-heading' }, 'More celebration ideas'),
-    h('p', { className: 'gallery-note' }, 'Explore four AI-generated styling concepts for inspiration. Select a photo to see it in more detail.'),
     h('div', { className: 'grid' }, concepts.map(concept => h(ConceptCard, { key: concept.image, concept }))));
 }
 
