@@ -1,5 +1,4 @@
 import { createElement as h, Fragment, useRef } from 'react';
-                                       
 import { createRoot } from 'react-dom/client';
 
                 
@@ -114,28 +113,14 @@ function Gallery() {
     h('div', { className: 'grid' }, concepts.map(concept => h(ConceptCard, { key: concept.image, concept }))));
 }
 
-function requestBooking(event                            ) {
-  event.preventDefault();
-  const fields = new FormData(event.currentTarget);
-  const details = [
-    ['Name', fields.get('name')],
-    ['Email', fields.get('email')],
-    ['Occasion', fields.get('occasion')],
-    ['Preferred date', fields.get('date')],
-    ['Town or venue', fields.get('venue')],
-    ['Decor ideas', fields.get('notes')],
-  ].map(([label, value]) => label + ': ' + (value || 'To be discussed')).join('\n');
-  window.location.href = 'mailto:bekuretsion222@gmail.com?subject=' +
-    encodeURIComponent('Habesha Decor booking request') + '&body=' + encodeURIComponent(details);
-}
-
 function Planning() {
   return h('section', { className: 'planning', id: 'planning' },
     h('div', null,
       h('span', { className: 'eyebrow' }, 'Plan your event'),
       h('h2', null, 'Request a booking'),
-      h('p', null, 'Choose your preferred date and tell us about your event. The button opens a draft in your email app. Send it to request availability.')),
-    h('form', { className: 'booking-form', onSubmit: requestBooking },
+      h('p', null, 'Choose your preferred date and send us your event details. We’ll reply by email to confirm availability.')),
+    h('form', { className: 'booking-form', action: 'https://formsubmit.co/bekuretsion222@gmail.com', method: 'POST' },
+      h('input', { type: 'hidden', name: '_subject', value: 'Habesha Decor booking request' }),
       h('label', null, 'Your name', h('input', { name: 'name', autoComplete: 'name', required: true })),
       h('label', null, 'Your email', h('input', { type: 'email', name: 'email', autoComplete: 'email', required: true })),
       h('label', null, 'Occasion', h('select', { name: 'occasion', required: true },
@@ -145,7 +130,7 @@ function Planning() {
       h('label', { className: 'booking-wide' }, 'Town or venue', h('input', { name: 'venue' })),
       h('label', { className: 'booking-wide' }, 'Decor ideas or guest count', h('textarea', { name: 'notes', rows: 3 })),
       h('div', { className: 'booking-wide' },
-        h('button', { className: 'button', type: 'submit' }, 'Send'),
+        h('button', { className: 'button', type: 'submit' }, 'Send Booking'),
         h('p', null, 'You can also email ', h('a', { href: 'mailto:bekuretsion222@gmail.com' }, 'bekuretsion222@gmail.com'), '.'))));
 }
 
@@ -173,6 +158,7 @@ function App() {
 
 const root = document.getElementById('root');
 if (root) createRoot(root).render(h(App));
+
 
 
 
