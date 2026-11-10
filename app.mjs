@@ -32,6 +32,15 @@ const concepts                     = [
   },
 ];
 
+const weddingReferences                     = [
+  { occasion: 'Wedding stage', title: 'Blush & Gold', image: './16-blush-gold-jali-reception-stage-c.webp', alt: 'Gold lattice panels, blush florals and chandeliers behind an ivory sofa', description: 'Layered draping and warm gold accents.' },
+  { occasion: 'Wedding stage', title: 'Burgundy & Gold', image: './event17-burgundy-gold.webp', alt: 'Red roses and gold curtains around an ivory sofa', description: 'Rich reds and candlelit gold.' },
+  { occasion: 'Wedding stage', title: 'Teal Floral Arch', image: './04-teal-floral-stage-c.webp', alt: 'Teal curtains and colorful flowers above white seating', description: 'Deep teal draping framed by bright flowers.' },
+  { occasion: 'Wedding stage', title: 'Green & White', image: './event15-green-white.webp', alt: 'White roses and greenery frame an ivory chaise', description: 'Fresh greenery and an ivory floral canopy.' },
+  { occasion: 'Ballroom reception', title: 'Dusty Blue Ballroom', image: './20-dusty-blue-ballroom-reception-c.webp', alt: 'Dusty blue linens, white flowers and illuminated ballroom panels', description: 'Soft blue tablescapes with sculptural lighting.' },
+  { occasion: 'Sweetheart stage', title: 'Champagne Draping', image: './25-champagne-drape-sweetheart-stage-1008.avif', alt: 'Champagne drapery and florals frame sweetheart seating', description: 'Soft champagne swags and warm floral accents.' },
+];
+
 function Header() {
   return h('header', null,
     h('a', { className: 'brand', href: '#' }, 'Habesha Decor'),
@@ -64,8 +73,8 @@ function Introduction() {
 function Services() {
   return h('section', { className: 'service-feature', id: 'services' },
     h('figure', null,
-      h('img', { src: './anniversary.jpg', alt: concepts[2].alt, loading: 'lazy' }),
-      h('figcaption', null, 'Styling concept · Candlelit tablescape')),
+      h('img', { src: weddingReferences[5].image, alt: weddingReferences[5].alt, loading: 'lazy' }),
+      h('figcaption', null, 'Champagne sweetheart stage · Events By Maryam')),
     h('div', null,
       h('span', { className: 'eyebrow' }, 'Habesha wedding styling'),
       h('h2', null, 'From the reception to the Melse'),
@@ -75,7 +84,7 @@ function Services() {
 
 function ConceptCard({ concept }                      ) {
   const dialog = useRef                   (null);
-  const titleId = concept.image.slice(2, -4) + '-title';
+  const titleId = concept.image.slice(2, concept.image.lastIndexOf('.')) + '-title';
 
   return h('article', { className: 'card' },
     h('button', { className: 'photo-button', type: 'button',
@@ -95,9 +104,12 @@ function ConceptCard({ concept }                      ) {
 function Gallery() {
   return h('section', { className: 'services', id: 'occasions' },
     h('span', { className: 'eyebrow' }, 'Honoring Habesha tradition'),
-    h('h2', null, 'Ethiopian & Eritrean wedding inspiration'),
+    h('h2', null, 'Wedding Decor Inspiration'),
+    h('p', { className: 'gallery-note' }, 'Reference photography and event styling by ', h('a', { href: 'https://eventsbymaryam.com/habesha-wedding-decorator-columbus' }, 'Events By Maryam'), '. Select a photo to see it in more detail.'),
+    h('div', { className: 'grid reference-grid' }, weddingReferences.map(concept => h(ConceptCard, { key: concept.image, concept }))),
+    h('h2', { className: 'concept-heading' }, 'More celebration ideas'),
     h('p', { className: 'gallery-note' }, 'Explore four AI-generated styling concepts for inspiration. Select a photo to see it in more detail.'),
-    h('div', { className: 'grid' }, concepts.map(concept => h(ConceptCard, { key: concept.occasion, concept }))));
+    h('div', { className: 'grid' }, concepts.map(concept => h(ConceptCard, { key: concept.image, concept }))));
 }
 
 function Planning() {
@@ -135,5 +147,6 @@ function App() {
 
 const root = document.getElementById('root');
 if (root) createRoot(root).render(h(App));
+
 
 

@@ -93,3 +93,10 @@ figcaption{font-size:13px;color:var(--muted);margin-top:9px}
 .faq details,.faq details:last-child{border-color:#e0c78038}
 section[id]{scroll-margin-top:105px}
 @media(max-width:650px){.service-feature{grid-template-columns:1fr}.hero{min-height:720px}.hero::before{background:linear-gradient(0deg,#15120f 3%,#15120fe8 29%,#15120f25 78%)}header{padding-inline:12px;gap:4px 12px}.brand{font-size:21px}nav{gap:8px 12px}.nav-cta{padding:5px 9px}}
+.reference-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.reference-grid .card:first-child{grid-column:span 2}
+.reference-grid .card:first-child img{aspect-ratio:2/1}
+.reference-grid .card dialog img{aspect-ratio:auto}
+.concept-heading{margin-top:clamp(48px,8vw,100px)}
+@media(max-width:850px){.reference-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.reference-grid{grid-template-columns:1fr}.reference-grid .card:first-child{grid-column:auto}}
