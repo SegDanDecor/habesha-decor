@@ -73,8 +73,7 @@ function Introduction() {
 function Services() {
   return h('section', { className: 'service-feature', id: 'services' },
     h('figure', null,
-      h('img', { src: weddingReferences[5].image, alt: weddingReferences[5].alt, loading: 'lazy' }),
-      h('figcaption', null, 'Champagne sweetheart stage · Events By Maryam')),
+      h('img', { src: weddingReferences[5].image, alt: weddingReferences[5].alt, loading: 'lazy' })),
     h('div', null,
       h('span', { className: 'eyebrow' }, 'Our services'),
       h('h2', null, 'Decor for every celebration'),
@@ -149,6 +148,7 @@ function App() {
 
 const root = document.getElementById('root');
 if (root) createRoot(root).render(h(App));
+
 
 
 
