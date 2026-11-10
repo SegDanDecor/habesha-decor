@@ -76,9 +76,13 @@ function Services() {
       h('img', { src: weddingReferences[5].image, alt: weddingReferences[5].alt, loading: 'lazy' }),
       h('figcaption', null, 'Champagne sweetheart stage · Events By Maryam')),
     h('div', null,
-      h('span', { className: 'eyebrow' }, 'Habesha wedding styling'),
-      h('h2', null, 'From the reception to the Melse'),
-      h('p', null, 'Think ivory draping and floral arrangements around the sweetheart table, then warm tones and woven textures for the Melse. Leave room in your plan for a buna corner, family seating, and dancing.'),
+      h('span', { className: 'eyebrow' }, 'Our services'),
+      h('h2', null, 'Decor for every celebration'),
+      h('ul', { className: 'event-details' },
+        h('li', null, h('strong', null, 'Birthday decor'), ' — Cake tables, photo backdrops, and themed details.'),
+        h('li', null, h('strong', null, 'Baptism decor'), ' — Soft palettes and welcoming table settings for the family reception.'),
+        h('li', null, h('strong', null, 'Wedding decor'), ' — Reception stages, florals, and draping for weddings and Melse celebrations.'),
+        h('li', null, h('strong', null, 'Family celebrations'), ' — Decor for anniversaries, engagements, and other special gatherings.')),
       h('a', { className: 'button', href: '#planning' }, 'Plan your celebration')));
 }
 
@@ -147,6 +151,7 @@ function App() {
 
 const root = document.getElementById('root');
 if (root) createRoot(root).render(h(App));
+
 
 
 
