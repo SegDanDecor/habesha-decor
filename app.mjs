@@ -145,7 +145,7 @@ function Planning() {
       h('label', { className: 'booking-wide' }, 'Town or venue', h('input', { name: 'venue' })),
       h('label', { className: 'booking-wide' }, 'Decor ideas or guest count', h('textarea', { name: 'notes', rows: 3 })),
       h('div', { className: 'booking-wide' },
-        h('button', { className: 'button', type: 'submit' }, 'Open booking email'),
+        h('button', { className: 'button', type: 'submit' }, 'Send'),
         h('p', null, 'You can also email ', h('a', { href: 'mailto:bekuretsion222@gmail.com' }, 'bekuretsion222@gmail.com'), '.'))));
 }
 
@@ -173,6 +173,7 @@ function App() {
 
 const root = document.getElementById('root');
 if (root) createRoot(root).render(h(App));
+
 
 
 
