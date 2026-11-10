@@ -91,8 +91,7 @@ function Planning() {
       h('label', { className: 'booking-wide' }, 'Town or venue', h('input', { name: 'venue' })),
       h('label', { className: 'booking-wide' }, 'Decor ideas or guest count', h('textarea', { name: 'notes', rows: 3 })),
       h('div', { className: 'booking-wide' },
-        h('button', { className: 'button', type: 'submit' }, 'Send Booking'),
-        h('p', null, 'You can also email ', h('a', { href: 'mailto:bekuretsion222@gmail.com' }, 'bekuretsion222@gmail.com'), '.'))));
+        h('button', { className: 'button', type: 'submit' }, 'Send Booking'))));
 }
 
 function Questions() {
@@ -116,3 +115,4 @@ export function App() {
     h('main', { id: 'main' }, h(Hero), h(Introduction), h(Gallery), h(Services), h(Questions), h(Planning)),
     h('footer', null, 'ሰገናት Habesha Decor · Switzerland'));
 }
+
