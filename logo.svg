@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <title>Habesha Decor woven mesob</title>
+  <title>ሰገናት Habesha Decor woven mesob</title>
   <circle cx="32" cy="32" r="30" fill="#22160e" stroke="#d4a85b" stroke-width="1.5"/>
   <path d="M9 30h46c-2 9-7 14-15 17l4 6H20l4-6C16 44 11 39 9 30Z" fill="#cc994c" stroke="#f8e4b0" stroke-width="1.2" stroke-linejoin="round"/>
   <path d="M11 30c4-8 10-13 21-16 11 3 17 8 21 16Z" fill="#dcaf60" stroke="#f8e4b0" stroke-width="1.2"/>
@@ -8,3 +8,4 @@
   <path d="M10 30h44M19 42h26m-21 5h16m-18 3h20" fill="none" stroke="#f8e4b0" stroke-width="1.4"/>
   <path d="m32 38 3 3-3 3-3-3Z" fill="#365849"/>
 </svg>
+

@@ -43,7 +43,7 @@ const weddingReferences                     = [
 
 function Header() {
   return h('header', null,
-    h('a', { className: 'brand', href: '#' }, h('img', { src: './logo.svg?v=mesob', alt: '', width: 44, height: 44 }), 'Habesha Decor'),
+    h('a', { className: 'brand', href: '#' }, h('img', { src: './logo.svg?v=mesob', alt: '', width: 44, height: 44 }), 'ሰገናት Habesha Decor'),
     h('nav', { 'aria-label': 'Main navigation' },
       h('a', { href: '#occasions' }, 'Gallery'),
       h('a', { href: '#services' }, 'Services'),
@@ -65,7 +65,7 @@ function Hero() {
 
 function Introduction() {
   return h('section', { className: 'intro' },
-    h('p', null, 'Habesha Decor brings Ethiopian and Eritrean wedding traditions into the setting you choose for your celebration in Switzerland.'),
+    h('p', null, 'ሰገናት Habesha Decor brings Ethiopian and Eritrean wedding traditions into the setting you choose for your celebration in Switzerland.'),
     h('span', { className: 'gold-rule', 'aria-hidden': true }),
     h('p', null, 'Find inspiration for your reception, Melse, or next family celebration. Selections can begin with a backdrop, a palette, or a detail you love.'));
 }
@@ -120,7 +120,7 @@ function Planning() {
       h('h2', null, 'Request a booking'),
       h('p', null, 'Choose your preferred date and send us your event details. We’ll reply by email to confirm availability.')),
     h('form', { className: 'booking-form', action: 'https://formsubmit.co/bekuretsion222@gmail.com', method: 'POST' },
-      h('input', { type: 'hidden', name: '_subject', value: 'Habesha Decor booking request' }),
+      h('input', { type: 'hidden', name: '_subject', value: 'ሰገናት Habesha Decor booking request' }),
       h('label', null, 'Your name', h('input', { name: 'name', autoComplete: 'name', required: true })),
       h('label', null, 'Your email', h('input', { type: 'email', name: 'email', autoComplete: 'email', required: true })),
       h('label', null, 'Occasion', h('select', { name: 'occasion', required: true },
@@ -136,7 +136,7 @@ function Planning() {
 
 function Questions() {
   const questions = [
-    ['What occasions does Habesha Decor cover?', 'Weddings, baptisms, anniversaries, birthdays, and other family celebrations in Switzerland.'],
+    ['What occasions does ሰገናት Habesha Decor cover?', 'Weddings, baptisms, anniversaries, birthdays, and other family celebrations in Switzerland.'],
     ['What should I have ready when planning decor?', 'Start with your event date, venue or town, and approximate guest count. Add any colors, traditions, or decor ideas you want to include.'],
     ['Can I use a gallery concept as inspiration?', 'Yes. Choose the colors, flowers, or backdrop details you like, then use them as a starting point for your own celebration.'],
   ];
@@ -153,11 +153,12 @@ function App() {
     h('a', { className: 'skip-link', href: '#main' }, 'Skip to content'),
     h(Header),
     h('main', { id: 'main' }, h(Hero), h(Introduction), h(Gallery), h(Services), h(Questions), h(Planning)),
-    h('footer', null, 'Habesha Decor · Switzerland'));
+    h('footer', null, 'ሰገናት Habesha Decor · Switzerland'));
 }
 
 const root = document.getElementById('root');
 if (root) createRoot(root).render(h(App));
+
 
 
 
