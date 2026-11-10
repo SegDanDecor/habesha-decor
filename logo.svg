@@ -1,11 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <title>ሰገናት Habesha Decor woven mesob</title>
-  <circle cx="32" cy="32" r="30" fill="#22160e" stroke="#d4a85b" stroke-width="1.5"/>
-  <path d="M9 30h46c-2 9-7 14-15 17l4 6H20l4-6C16 44 11 39 9 30Z" fill="#cc994c" stroke="#f8e4b0" stroke-width="1.2" stroke-linejoin="round"/>
-  <path d="M11 30c4-8 10-13 21-16 11 3 17 8 21 16Z" fill="#dcaf60" stroke="#f8e4b0" stroke-width="1.2"/>
-  <path d="M29 15v-4a3 3 0 0 1 6 0v4" fill="#dcaf60" stroke="#f8e4b0" stroke-width="1.2"/>
-  <path d="M19 23l6 3 7-6 7 6 6-3M14 36l6-3 6 6 6-6 6 6 6-6 6 3" fill="none" stroke="#8a3032" stroke-width="2.8" stroke-linejoin="round"/>
-  <path d="M10 30h44M19 42h26m-21 5h16m-18 3h20" fill="none" stroke="#f8e4b0" stroke-width="1.4"/>
-  <path d="m32 38 3 3-3 3-3-3Z" fill="#365849"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+<title>ሰገናት Habesha Decor woven baskets</title>
+<style>
+.front{transform-origin:40px 44px;animation:weave 2s ease-in-out infinite}
+@keyframes weave{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg) translateY(-1px)}}
+@media(prefers-reduced-motion:reduce){.front{animation:none}}
+</style>
+<defs>
+<pattern id="coils" width="2" height="2" patternUnits="userSpaceOnUse"><path d="M0 1h2" stroke="#fff1c4" opacity=".24" stroke-width=".5"/></pattern>
+<path id="ray" d="M0 0 -3.5-12 -7-23 0-25 7-23 3.5-12Z"/>
+</defs>
+<g transform="translate(28 28)">
+<circle r="24" fill="#a9713d" stroke="#f4ce86" stroke-width="1.4"/>
+<circle r="18" fill="#e9c98e"/>
+<path d="M0-22 5-17 0-12-5-17ZM22 0l-5 5-5-5 5-5ZM0 22l-5-5 5-5 5 5ZM-22 0l5-5 5 5-5 5ZM-16-16l7 1 1 7-7-1ZM16-16l-1 7-7 1 1-7Z" fill="#853434"/>
+<circle r="12" fill="none" stroke="#a67849" stroke-width="2" stroke-dasharray=".7 1.2"/>
+<circle r="23" fill="url(#coils)"/>
+</g>
+<g class="front"><g transform="translate(40 44)">
+<circle r="25" fill="#2d2030" stroke="#ffe2a3" stroke-width="1.6"/>
+<use href="#ray" fill="#c94f72"/>
+<use href="#ray" transform="rotate(45)" fill="#6f66cb"/>
+<use href="#ray" transform="rotate(90)" fill="#e9a650"/>
+<use href="#ray" transform="rotate(135)" fill="#455db5"/>
+<use href="#ray" transform="rotate(180)" fill="#d45680"/>
+<use href="#ray" transform="rotate(225)" fill="#ca4f42"/>
+<use href="#ray" transform="rotate(270)" fill="#53856f"/>
+<use href="#ray" transform="rotate(315)" fill="#df9854"/>
+<circle r="19" fill="none" stroke="#fff0bf" stroke-width="2" stroke-dasharray="2 2.8"/>
+<circle r="14" fill="none" stroke="#f9dc91" stroke-width="1.4" stroke-dasharray="1.6 2.5"/>
+<circle r="8" fill="none" stroke="#f4d28d" stroke-width="1.2" stroke-dasharray="1.3 1.8"/>
+<circle r="24" fill="url(#coils)"/>
+<circle r="4" fill="#2d2030" stroke="#edc77e"/>
+</g></g>
 </svg>
-
