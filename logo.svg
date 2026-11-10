@@ -1,21 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
 <title>ሰገናት Habesha Decor woven baskets</title>
 <style>
-.front{transform-origin:40px 44px;animation:weave 2s ease-in-out infinite}
-@keyframes weave{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg) translateY(-1px)}}
-@media(prefers-reduced-motion:reduce){.front{animation:none}}
+.back,.front{animation:spin 2s linear infinite}
+.back{transform-origin:28px 28px;animation-direction:reverse}
+.front{transform-origin:40px 44px}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.back,.front{animation:none}}
 </style>
 <defs>
 <pattern id="coils" width="2" height="2" patternUnits="userSpaceOnUse"><path d="M0 1h2" stroke="#fff1c4" opacity=".24" stroke-width=".5"/></pattern>
 <path id="ray" d="M0 0 -3.5-12 -7-23 0-25 7-23 3.5-12Z"/>
 </defs>
-<g transform="translate(28 28)">
+<g class="back"><g transform="translate(28 28)">
 <circle r="24" fill="#a9713d" stroke="#f4ce86" stroke-width="1.4"/>
 <circle r="18" fill="#e9c98e"/>
 <path d="M0-22 5-17 0-12-5-17ZM22 0l-5 5-5-5 5-5ZM0 22l-5-5 5-5 5 5ZM-22 0l5-5 5 5-5 5ZM-16-16l7 1 1 7-7-1ZM16-16l-1 7-7 1 1-7Z" fill="#853434"/>
 <circle r="12" fill="none" stroke="#a67849" stroke-width="2" stroke-dasharray=".7 1.2"/>
 <circle r="23" fill="url(#coils)"/>
-</g>
+</g></g>
 <g class="front"><g transform="translate(40 44)">
 <circle r="25" fill="#2d2030" stroke="#ffe2a3" stroke-width="1.6"/>
 <use href="#ray" fill="#c94f72"/>
@@ -33,3 +35,5 @@
 <circle r="4" fill="#2d2030" stroke="#edc77e"/>
 </g></g>
 </svg>
+
+

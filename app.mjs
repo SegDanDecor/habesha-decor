@@ -43,7 +43,7 @@ const weddingReferences                     = [
 
 function Header() {
   return h('header', null,
-    h('a', { className: 'brand', href: '#' }, h('img', { src: './logo.svg?v=woven', alt: '', width: 44, height: 44 }), 'ሰገናት Habesha Decor'),
+    h('a', { className: 'brand', href: '#' }, h('img', { src: './logo.svg?v=counterspin', alt: '', width: 44, height: 44 }), 'ሰገናት Habesha Decor'),
     h('nav', { 'aria-label': 'Main navigation' },
       h('a', { href: '#occasions' }, 'Gallery'),
       h('a', { href: '#services' }, 'Services'),
@@ -158,6 +158,7 @@ function App() {
 
 const root = document.getElementById('root');
 if (root) createRoot(root).render(h(App));
+
 
 
 
