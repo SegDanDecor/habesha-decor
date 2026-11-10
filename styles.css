@@ -9,7 +9,7 @@ nav{display:flex;flex-wrap:wrap;gap:20px}
 nav a,.brand,.button{text-decoration:none}
 nav a{font-size:14px}
 .brand,h1,h2,h3{font-family:Georgia,serif;font-weight:400}
-.brand{font-size:26px}.brand::before{content:"✦";color:var(--gold);margin-right:10px}
+.brand{font-size:26px}
 .hero{position:relative;isolation:isolate;min-height:clamp(570px,76vh,840px);display:grid;align-items:end;padding-block:70px;background:#332b23;color:#fff8ed}
 .hero::before,.art{position:absolute;inset:0;width:100%;height:100%}
 .art{z-index:-2;object-fit:cover;object-position:center 53%}
@@ -100,3 +100,5 @@ section[id]{scroll-margin-top:105px}
 .concept-heading{margin-top:clamp(48px,8vw,100px)}
 @media(max-width:850px){.reference-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.reference-grid{grid-template-columns:1fr}.reference-grid .card:first-child{grid-column:auto}}
+
+.brand{display:inline-flex;align-items:center;gap:10px}.brand img{display:block;flex:none}@media(max-width:650px){.brand img{width:36px;height:36px}}

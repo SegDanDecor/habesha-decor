@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Habesha Decor monogram</title>
+  <defs>
+    <linearGradient id="gold" x2="1" y2="1">
+      <stop stop-color="#ffe7a8"/>
+      <stop offset="1" stop-color="#bf9852"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 2 62 32 32 62 2 32Z" fill="#201810" stroke="url(#gold)" stroke-width="1.6"/>
+  <path d="M32 7 57 32 32 57 7 32Z" fill="none" stroke="#ad864b" stroke-width=".75"/>
+  <path d="m32 10 3 3-3 3-3-3Zm19 19 3 3-3 3-3-3ZM32 48l3 3-3 3-3-3ZM13 29l3 3-3 3-3-3Z" fill="#e4c47e"/>
+  <path d="M19 23h9v2h-3v6h8v-6h-3v-2h10v2h-3v15h3v2H30v-2h3v-7h-8v7h3v2h-9v-2h2V25h-2Z" fill="url(#gold)"/>
+  <path d="M37 24c7 0 12 3 12 9s-5 9-12 9v-2c5-.3 8-3 8-7s-3-6.7-8-7Z" fill="url(#gold)"/>
+</svg>
