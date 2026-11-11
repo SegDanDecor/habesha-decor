@@ -131,3 +131,7 @@ img{max-width:100%}
   dialog{width:94vw;max-height:90svh}
 }
 @media(max-width:360px){.hero-actions{display:grid}.hero-actions .button{margin-top:10px}}
+.language-picker{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--gold)}
+.language-picker select{min-height:44px;max-width:135px;border:1px solid #e0c78065;border-radius:8px;background:#211b15;color:var(--ink);font:inherit;font-size:15px;padding:5px}
+@media(max-width:1050px){header{flex-wrap:wrap}.language-picker{margin-left:auto}}
+@media(max-width:650px){.language-picker{width:100%;justify-content:center;margin:0}.hero{padding-top:35px}section[id]{scroll-margin-top:210px}}

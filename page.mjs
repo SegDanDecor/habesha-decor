@@ -1,10 +1,14 @@
-import { createElement as h, Fragment, useRef } from 'react';
+                                             
+import { useElements, LanguagePicker } from './language.mjs';
+import { Fragment, useRef } from 'react';
 import { concepts, weddingReferences } from './gallery.mjs';
                                              
 
 function Header() {
+  const h = useElements();
   return h('header', null,
     h('a', { className: 'brand', href: '#' }, h('img', { src: './logo.svg?v=counterspin', alt: '', width: 44, height: 44 }), 'ሰገናት Habesha Decor'),
+    h(LanguagePicker),
     h('nav', { 'aria-label': 'Main navigation' },
       h('a', { href: '#occasions' }, 'Gallery'),
       h('a', { href: '#services' }, 'Services'),
@@ -12,6 +16,7 @@ function Header() {
 }
 
 function Hero() {
+  const h = useElements();
   const wedding = concepts[0];
   return h('section', { className: 'hero' },
     h('div', null,
@@ -25,6 +30,7 @@ function Hero() {
 }
 
 function Introduction() {
+  const h = useElements();
   return h('section', { className: 'intro' },
     h('p', null, 'ሰገናት Habesha Decor brings Ethiopian and Eritrean wedding traditions into the setting you choose for your celebration in Switzerland.'),
     h('span', { className: 'gold-rule', 'aria-hidden': true }),
@@ -32,6 +38,7 @@ function Introduction() {
 }
 
 function Services() {
+  const h = useElements();
   return h('section', { className: 'service-feature', id: 'services' },
     h('figure', null,
       h('img', { src: weddingReferences[5].image, alt: weddingReferences[5].alt, loading: 'lazy' })),
@@ -46,7 +53,8 @@ function Services() {
       h('a', { className: 'button', href: '#planning' }, 'Plan your celebration')));
 }
 
-function ConceptCard({ concept }                                            ) {
+function ConceptCard({ concept }                                                                  ) {
+  const h = useElements();
   const dialog = useRef                   (null);
   const titleId = concept.image.slice(2, concept.image.lastIndexOf('.')) + '-title';
 
@@ -66,6 +74,7 @@ function ConceptCard({ concept }                                            ) {
 }
 
 function Gallery() {
+  const h = useElements();
   return h('section', { className: 'services', id: 'occasions' },
     h('span', { className: 'eyebrow' }, 'Honoring Habesha tradition'),
     h('h2', null, 'Wedding Decor Inspiration'),
@@ -75,6 +84,7 @@ function Gallery() {
 }
 
 function Planning() {
+  const h = useElements();
   return h('section', { className: 'planning', id: 'planning' },
     h('div', null,
       h('span', { className: 'eyebrow' }, 'Plan your event'),
@@ -95,6 +105,7 @@ function Planning() {
 }
 
 function Questions() {
+  const h = useElements();
   const questions = [
     ['What occasions does ሰገናት Habesha Decor cover?', 'Weddings, baptisms, anniversaries, birthdays, and other family celebrations in Switzerland.'],
     ['What should I have ready when planning decor?', 'Start with your event date, venue or town, and approximate guest count. Add any colors, traditions, or decor ideas you want to include.'],
@@ -109,10 +120,12 @@ function Questions() {
 }
 
 export function App() {
+  const h = useElements();
   return h(Fragment, null,
     h('a', { className: 'skip-link', href: '#main' }, 'Skip to content'),
     h(Header),
     h('main', { id: 'main' }, h(Hero), h(Introduction), h(Gallery), h(Services), h(Questions), h(Planning)),
     h('footer', null, 'ሰገናት Habesha Decor · Switzerland'));
 }
+
 
